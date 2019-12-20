@@ -1825,6 +1825,7 @@ static void unitDisinfectionRun(void)
 			last_active_uv_lamp = (uint8_t)ini_getl(DEVICE_SECTION_NAME, LAST_ACTIVE_UV_LAMP_KEY_NAME, 0, SETTINGS_INI_FILE);
 
 
+            //TODO THESE IF STATEMENTS CAN BE REDUCED
 			// Get the lamp to use
 			active_uv_lamp = unitDisinfectionRun_GetLampSetToUse();
 
