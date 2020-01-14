@@ -512,7 +512,7 @@ static void unitDisinfectionRun(void)
             }
 
             //Go into lid open state
-            unit_disinfection_state = UNIT_DISINFECTION_STATE_OPEN_LID;
+            unit_disinfection_state = UNIT_DISINFECTION_STATE_OPEN_LID
 
             break;
 
