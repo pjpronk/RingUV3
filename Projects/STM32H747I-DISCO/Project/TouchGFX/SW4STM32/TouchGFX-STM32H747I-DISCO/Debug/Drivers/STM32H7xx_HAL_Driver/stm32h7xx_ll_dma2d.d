@@ -1,2 +1,2 @@
 Drivers/STM32H7xx_HAL_Driver/stm32h7xx_ll_dma2d.o: \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_dma2d.c
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_dma2d.c

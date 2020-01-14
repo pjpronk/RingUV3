@@ -57,7 +57,7 @@ void lidInitialization(void)
   */
 void lidActivateSolenoid(void)
 {
-	HAL_GPIO_WritePin(LID_SOLENOID_GPIO_PORT, LID_SOLEOID_PIN, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(LID_SOLENOID_GPIO_PORT, LID_SOLENOID_PIN, GPIO_PIN_SET);
 }
 
 /**

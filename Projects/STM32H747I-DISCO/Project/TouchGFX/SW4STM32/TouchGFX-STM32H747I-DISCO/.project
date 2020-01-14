@@ -911,7 +911,7 @@
 	<variableList>
 		<variable>
 			<name>copy_PARENT</name>
-			<value>file:/D:/Software/UvSmart/Projects/STM32H747I-DISCO/Project/TouchGFX/SW4STM32</value>
+			<value>file:/Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/SW4STM32</value>
 		</variable>
 		<variable>
 			<name>copy_PARENT1</name>

@@ -1,38 +1,38 @@
 Middleware/FreeRTOS/tasks.o: \
- D:/Software/UvSmart/Middlewares/Third_Party/FreeRTOS/Source/tasks.c \
- D:/Software/UvSmart/Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
- D:/Software/UvSmart/Projects/STM32H747I-DISCO/Project/TouchGFX/Config/FreeRTOSConfig.h \
- D:/Software/UvSmart/Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \
- D:/Software/UvSmart/Middlewares/Third_Party/FreeRTOS/Source/include/portable.h \
- D:/Software/UvSmart/Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h \
- D:/Software/UvSmart/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1/portmacro.h \
- D:/Software/UvSmart/Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h \
- D:/Software/UvSmart/Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
- D:/Software/UvSmart/Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
- D:/Software/UvSmart/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h \
- D:/Software/UvSmart/Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
- D:/Software/UvSmart/Middlewares/Third_Party/FreeRTOS/Source/include/stack_macros.h
+ /Users/ppronk/CLionProjects/UVSmartD25/Middlewares/Third_Party/FreeRTOS/Source/tasks.c \
+ /Users/ppronk/CLionProjects/UVSmartD25/Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/Config/FreeRTOSConfig.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Middlewares/Third_Party/FreeRTOS/Source/include/portable.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1/portmacro.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Middlewares/Third_Party/FreeRTOS/Source/include/stack_macros.h
 
-D:/Software/UvSmart/Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
 
-D:/Software/UvSmart/Projects/STM32H747I-DISCO/Project/TouchGFX/Config/FreeRTOSConfig.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/Config/FreeRTOSConfig.h:
 
-D:/Software/UvSmart/Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h:
 
-D:/Software/UvSmart/Middlewares/Third_Party/FreeRTOS/Source/include/portable.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Middlewares/Third_Party/FreeRTOS/Source/include/portable.h:
 
-D:/Software/UvSmart/Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h:
 
-D:/Software/UvSmart/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1/portmacro.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1/portmacro.h:
 
-D:/Software/UvSmart/Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h:
 
-D:/Software/UvSmart/Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
 
-D:/Software/UvSmart/Middlewares/Third_Party/FreeRTOS/Source/include/list.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Middlewares/Third_Party/FreeRTOS/Source/include/list.h:
 
-D:/Software/UvSmart/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h:
 
-D:/Software/UvSmart/Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
 
-D:/Software/UvSmart/Middlewares/Third_Party/FreeRTOS/Source/include/stack_macros.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Middlewares/Third_Party/FreeRTOS/Source/include/stack_macros.h:

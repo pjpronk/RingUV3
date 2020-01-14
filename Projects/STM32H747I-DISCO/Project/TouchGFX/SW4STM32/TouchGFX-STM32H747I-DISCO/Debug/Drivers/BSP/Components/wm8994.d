@@ -1,8 +1,8 @@
 Drivers/BSP/Components/wm8994.o: \
- D:/Software/UvSmart/Drivers/BSP/Components/wm8994/wm8994.c \
- D:/Software/UvSmart/Drivers/BSP/Components/wm8994/wm8994.h \
- d:\software\uvsmart\drivers\bsp\components\common\audio.h
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/BSP/Components/wm8994/wm8994.c \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/BSP/Components/wm8994/wm8994.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/BSP/Components/wm8994/../Common/audio.h
 
-D:/Software/UvSmart/Drivers/BSP/Components/wm8994/wm8994.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/BSP/Components/wm8994/wm8994.h:
 
-d:\software\uvsmart\drivers\bsp\components\common\audio.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/BSP/Components/wm8994/../Common/audio.h:

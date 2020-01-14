@@ -1,230 +1,230 @@
 Middleware/TouchGFX/Target/STM32H7Instrumentation.o: \
- D:/Software/UvSmart/Projects/STM32H747I-DISCO/Project/TouchGFX/Gui/target/STM32H7Instrumentation.cpp \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h \
- D:/Software/UvSmart/Projects/STM32H747I-DISCO/Project/TouchGFX/Config/stm32h7xx_hal_conf.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h \
- D:/Software/UvSmart/Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h \
- D:/Software/UvSmart/Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h747xx.h \
- D:/Software/UvSmart/Drivers/CMSIS/Include/core_cm7.h \
- D:/Software/UvSmart/Drivers/CMSIS/Include/cmsis_version.h \
- D:/Software/UvSmart/Drivers/CMSIS/Include/cmsis_compiler.h \
- D:/Software/UvSmart/Drivers/CMSIS/Include/cmsis_gcc.h \
- D:/Software/UvSmart/Drivers/CMSIS/Include/mpu_armv7.h \
- D:/Software/UvSmart/Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dma.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dma_ex.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dma2d.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dsi.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dfsdm.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_cortex.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_adc.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_adc.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_adc_ex.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_crc.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_crc_ex.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash_ex.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hsem.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c_ex.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2s.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mdma.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_jpeg.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mmc.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_sdmmc.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mmc_ex.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_ltdc.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_ltdc_ex.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dsi.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr_ex.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_qspi.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rtc.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rtc_ex.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sai.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sai_ex.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sd.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_delayblock.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sd_ex.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sdram.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_fmc.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hcd.h \
- D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h \
- D:/Software/UvSmart/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/hal/HAL.hpp \
- D:/Software/UvSmart/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/hal/Types.hpp \
- D:/Software/UvSmart/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/hal/Config.hpp \
- D:/Software/UvSmart/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/hal/BlitOp.hpp \
- D:/Software/UvSmart/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/hal/Gestures.hpp \
- D:/Software/UvSmart/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/events/ClickEvent.hpp \
- D:/Software/UvSmart/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/Event.hpp \
- D:/Software/UvSmart/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/events/DragEvent.hpp \
- D:/Software/UvSmart/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/events/GestureEvent.hpp \
- D:/Software/UvSmart/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/UIEventListener.hpp \
- D:/Software/UvSmart/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/hal/DMA.hpp \
- D:/Software/UvSmart/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/hal/Atomic.hpp \
- D:/Software/UvSmart/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/Unicode.hpp \
- D:/Software/UvSmart/Middlewares/ST/TouchGFX/touchgfx/framework/include/platform/driver/touch/TouchController.hpp \
- D:/Software/UvSmart/Middlewares/ST/TouchGFX/touchgfx/framework/include/platform/driver/button/ButtonController.hpp \
- D:/Software/UvSmart/Middlewares/ST/TouchGFX/touchgfx/framework/include/platform/core/MCUInstrumentation.hpp \
- D:/Software/UvSmart/Projects/STM32H747I-DISCO/Project/TouchGFX/Gui/target/STM32H7Instrumentation.hpp
+ /Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/Gui/target/STM32H7Instrumentation.cpp \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/Config/stm32h7xx_hal_conf.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h747xx.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/CMSIS/Include/core_cm7.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/CMSIS/Include/cmsis_version.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/CMSIS/Include/cmsis_compiler.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/CMSIS/Include/cmsis_gcc.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/CMSIS/Include/mpu_armv7.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dma.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dma_ex.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dma2d.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dsi.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dfsdm.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_cortex.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_adc.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_adc.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_adc_ex.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_crc.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_crc_ex.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash_ex.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hsem.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c_ex.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2s.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mdma.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_jpeg.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mmc.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_sdmmc.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mmc_ex.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_ltdc.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_ltdc_ex.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dsi.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr_ex.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_qspi.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rtc.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rtc_ex.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sai.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sai_ex.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sd.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_delayblock.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sd_ex.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sdram.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_fmc.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hcd.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/hal/HAL.hpp \
+ /Users/ppronk/CLionProjects/UVSmartD25/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/hal/Types.hpp \
+ /Users/ppronk/CLionProjects/UVSmartD25/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/hal/Config.hpp \
+ /Users/ppronk/CLionProjects/UVSmartD25/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/hal/BlitOp.hpp \
+ /Users/ppronk/CLionProjects/UVSmartD25/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/hal/Gestures.hpp \
+ /Users/ppronk/CLionProjects/UVSmartD25/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/events/ClickEvent.hpp \
+ /Users/ppronk/CLionProjects/UVSmartD25/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/Event.hpp \
+ /Users/ppronk/CLionProjects/UVSmartD25/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/events/DragEvent.hpp \
+ /Users/ppronk/CLionProjects/UVSmartD25/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/events/GestureEvent.hpp \
+ /Users/ppronk/CLionProjects/UVSmartD25/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/UIEventListener.hpp \
+ /Users/ppronk/CLionProjects/UVSmartD25/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/hal/DMA.hpp \
+ /Users/ppronk/CLionProjects/UVSmartD25/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/hal/Atomic.hpp \
+ /Users/ppronk/CLionProjects/UVSmartD25/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/Unicode.hpp \
+ /Users/ppronk/CLionProjects/UVSmartD25/Middlewares/ST/TouchGFX/touchgfx/framework/include/platform/driver/touch/TouchController.hpp \
+ /Users/ppronk/CLionProjects/UVSmartD25/Middlewares/ST/TouchGFX/touchgfx/framework/include/platform/driver/button/ButtonController.hpp \
+ /Users/ppronk/CLionProjects/UVSmartD25/Middlewares/ST/TouchGFX/touchgfx/framework/include/platform/core/MCUInstrumentation.hpp \
+ /Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/Gui/target/STM32H7Instrumentation.hpp
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h:
 
-D:/Software/UvSmart/Projects/STM32H747I-DISCO/Project/TouchGFX/Config/stm32h7xx_hal_conf.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/Config/stm32h7xx_hal_conf.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h:
 
-D:/Software/UvSmart/Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h:
 
-D:/Software/UvSmart/Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h747xx.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h747xx.h:
 
-D:/Software/UvSmart/Drivers/CMSIS/Include/core_cm7.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/CMSIS/Include/core_cm7.h:
 
-D:/Software/UvSmart/Drivers/CMSIS/Include/cmsis_version.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/CMSIS/Include/cmsis_version.h:
 
-D:/Software/UvSmart/Drivers/CMSIS/Include/cmsis_compiler.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/CMSIS/Include/cmsis_compiler.h:
 
-D:/Software/UvSmart/Drivers/CMSIS/Include/cmsis_gcc.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/CMSIS/Include/cmsis_gcc.h:
 
-D:/Software/UvSmart/Drivers/CMSIS/Include/mpu_armv7.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/CMSIS/Include/mpu_armv7.h:
 
-D:/Software/UvSmart/Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dma.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dma.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dma_ex.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dma_ex.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dma2d.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dma2d.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dsi.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dsi.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dfsdm.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dfsdm.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_cortex.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_cortex.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_adc.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_adc.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_adc.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_adc.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_adc_ex.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_adc_ex.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_crc.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_crc.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_crc_ex.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_crc_ex.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash_ex.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash_ex.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hsem.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hsem.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c_ex.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c_ex.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2s.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2s.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mdma.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mdma.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_jpeg.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_jpeg.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mmc.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mmc.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_sdmmc.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_sdmmc.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mmc_ex.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mmc_ex.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_ltdc.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_ltdc.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_ltdc_ex.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_ltdc_ex.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dsi.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dsi.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr_ex.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr_ex.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_qspi.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_qspi.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rtc.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rtc.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rtc_ex.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rtc_ex.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sai.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sai.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sai_ex.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sai_ex.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sd.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sd.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_delayblock.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_delayblock.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sd_ex.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sd_ex.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sdram.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sdram.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_fmc.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_fmc.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hcd.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hcd.h:
 
-D:/Software/UvSmart/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h:
 
-D:/Software/UvSmart/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/hal/HAL.hpp:
+/Users/ppronk/CLionProjects/UVSmartD25/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/hal/HAL.hpp:
 
-D:/Software/UvSmart/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/hal/Types.hpp:
+/Users/ppronk/CLionProjects/UVSmartD25/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/hal/Types.hpp:
 
-D:/Software/UvSmart/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/hal/Config.hpp:
+/Users/ppronk/CLionProjects/UVSmartD25/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/hal/Config.hpp:
 
-D:/Software/UvSmart/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/hal/BlitOp.hpp:
+/Users/ppronk/CLionProjects/UVSmartD25/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/hal/BlitOp.hpp:
 
-D:/Software/UvSmart/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/hal/Gestures.hpp:
+/Users/ppronk/CLionProjects/UVSmartD25/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/hal/Gestures.hpp:
 
-D:/Software/UvSmart/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/events/ClickEvent.hpp:
+/Users/ppronk/CLionProjects/UVSmartD25/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/events/ClickEvent.hpp:
 
-D:/Software/UvSmart/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/Event.hpp:
+/Users/ppronk/CLionProjects/UVSmartD25/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/Event.hpp:
 
-D:/Software/UvSmart/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/events/DragEvent.hpp:
+/Users/ppronk/CLionProjects/UVSmartD25/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/events/DragEvent.hpp:
 
-D:/Software/UvSmart/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/events/GestureEvent.hpp:
+/Users/ppronk/CLionProjects/UVSmartD25/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/events/GestureEvent.hpp:
 
-D:/Software/UvSmart/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/UIEventListener.hpp:
+/Users/ppronk/CLionProjects/UVSmartD25/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/UIEventListener.hpp:
 
-D:/Software/UvSmart/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/hal/DMA.hpp:
+/Users/ppronk/CLionProjects/UVSmartD25/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/hal/DMA.hpp:
 
-D:/Software/UvSmart/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/hal/Atomic.hpp:
+/Users/ppronk/CLionProjects/UVSmartD25/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/hal/Atomic.hpp:
 
-D:/Software/UvSmart/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/Unicode.hpp:
+/Users/ppronk/CLionProjects/UVSmartD25/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/Unicode.hpp:
 
-D:/Software/UvSmart/Middlewares/ST/TouchGFX/touchgfx/framework/include/platform/driver/touch/TouchController.hpp:
+/Users/ppronk/CLionProjects/UVSmartD25/Middlewares/ST/TouchGFX/touchgfx/framework/include/platform/driver/touch/TouchController.hpp:
 
-D:/Software/UvSmart/Middlewares/ST/TouchGFX/touchgfx/framework/include/platform/driver/button/ButtonController.hpp:
+/Users/ppronk/CLionProjects/UVSmartD25/Middlewares/ST/TouchGFX/touchgfx/framework/include/platform/driver/button/ButtonController.hpp:
 
-D:/Software/UvSmart/Middlewares/ST/TouchGFX/touchgfx/framework/include/platform/core/MCUInstrumentation.hpp:
+/Users/ppronk/CLionProjects/UVSmartD25/Middlewares/ST/TouchGFX/touchgfx/framework/include/platform/core/MCUInstrumentation.hpp:
 
-D:/Software/UvSmart/Projects/STM32H747I-DISCO/Project/TouchGFX/Gui/target/STM32H7Instrumentation.hpp:
+/Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/Gui/target/STM32H7Instrumentation.hpp:
