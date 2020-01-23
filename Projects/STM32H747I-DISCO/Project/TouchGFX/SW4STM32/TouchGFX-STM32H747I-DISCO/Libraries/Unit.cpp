@@ -75,7 +75,7 @@ void unitSetup()
 }
 
 
-void LoggingTimeStampNow(const char *keyname)
+void LoggingTimeStampNow(void)
 {
     char str[80];
     struct tm  ts;
@@ -84,37 +84,12 @@ void LoggingTimeStampNow(const char *keyname)
     time_t  timestamp = rtcGetUnixTime();
     ts = *localtime(&timestamp);
 
-    strftime(str, sizeof(str), "%a %Y-%m-%d %H:%M:%S %Z", &ts);
+    strftime(str, sizeof(str), "%a %Y-%m-%d %H:%M:%S %Z \n", &ts);
 
-    ini_puts(LOGGING_SECTION_NAME, keyname, str, SETTINGS_INI_FILE);
-
-}
-
-
-//Tom:ADD31
-//This routine will read the max weardown allowed from the Init file.
-//It will read a uint32_t value 0 = 0%   80 wquals 80%
-//
-//Return is a float  0.8   equals 80%
-float unitUVLampsWeardownProcent()
-{
-    //uint32_t value = (int)ini_getl(DEVICE_SECTION_NAME, UV_LAMP_WEARDOWN_MAX_KEY_NAME, 0L, SETTINGS_INI_FILE);
-
-	uint32_t value = 100;
-    if (value == 0)
-    {
-        return VARIABLE_T;
-    }
-
-    /*
-    if (value >= 100)
-    {
-        return VARIABLE_T;
-    }
-*/
-    return ((float)value)/100;
+    writeDebug(str, false);
 
 }
+
 
 
 
@@ -125,8 +100,6 @@ float unitUVLampsWeardownProcent()
   */
 void unitInitialization(void)
 {
-    debug(DEBUG_ENABLED, DEBUG_LEVEL_INFORMATION, "unitInitialization\r\n");
-
     rgbInitialization();
     lidInitialization();
     uvLightInitialization();
@@ -175,10 +148,13 @@ static void unitDisinfectionRun(void) {
 
     switch (unit_disinfection_state) {
         case UNIT_DISINFECTION_STATE_START: {
-            unitSetVolume();
+
+        	LoggingTimeStampNow();
+
             //Play STARTUP video and turn on WHITE lights
             rgbWhiteLedOn();
             playAviFile(VIDEO_SCREEN_A, false, NULL);
+
             /* Wait for the video and audio to end */
             while ((isAudioPlaying() == 1) || (isVideoPlaying() == 1));
 
@@ -203,7 +179,6 @@ static void unitDisinfectionRun(void) {
 
             //While lid is not closed, wait
             while (isLidClosed() == 0) {};
-
             unit_disinfection_state = UNIT_DISINFECTION_STATE_DISINFECTION;
 
             break;
@@ -221,18 +196,6 @@ static void unitDisinfectionRun(void) {
                                                            SETTINGS_INI_FILE);
             uint32_t lamp_2_fail_count = ini_getl(UV_SENSOR_SECTION_NAME, UV_LAMP_2_FAIL_COUNT_KEY_NAME, 0,
                                                            SETTINGS_INI_FILE);
-
-            writeDebug("Lamp_1_fail_count", false);
-            char lamp_1_count[] = {0};
-            snprintf(lamp_1_count, 64,"%lu", lamp_1_fail_count);
-            writeDebug(lamp_1_count, false);
-
-            writeDebug("Lamp_2_fail_count", false);
-            char lamp_2_count[] = {0};
-            snprintf(lamp_2_count, 64,"%lu", lamp_2_fail_count);
-            writeDebug(lamp_2_count, false);
-
-
 
             /* Lamp 1 has failed */
             if (lamp_1_fail_count == 1) {
@@ -282,11 +245,16 @@ static void unitDisinfectionRun(void) {
                     uvLight1Off();
                     uvLight2Off();
                     unit_disinfection_state = UNIT_DISINFECTION_STATE_LID_OPENED_UNAUTHORIZED_ERROR;
-
-                    /* goto used to escape nested while loop and case at the same time */
-                    goto DISINFECTION_BREAK;
+                    break;
                 }
             }
+
+            //Double break to escape while loop and case
+            if(unit_disinfection_state == UNIT_DISINFECTION_STATE_LID_OPENED_UNAUTHORIZED_ERROR){
+                break;
+            }
+
+
             /* Calculate the average sensor value for the active UV lamp */
             uv_lamp_sensor_value = 0;
             for (uint16_t i = 0; i < uv_sensor_sample_counter; i++)
@@ -304,11 +272,10 @@ static void unitDisinfectionRun(void) {
                          lidDeactivateSolenoid();
                          EnsureOpenLid();
                          unit_disinfection_state = UNIT_DISINFECTION_STATE_CHECK_RUNS;
-                         break;
                      }
 
-            DISINFECTION_BREAK:
             break;
+
         }
 
         case UNIT_DISINFECTION_STATE_LID_OPENED_UNAUTHORIZED_ERROR: {
@@ -333,10 +300,15 @@ static void unitDisinfectionRun(void) {
                 }
             }
 
+            /* Double break to escape while loop and case */
+            if(unit_disinfection_state == UNIT_DISINFECTION_STATE_DISINFECTION) {
+                break;
+            }
+
+            writeDebug("Disinfection failed because of unauthorized opening\n", false);
+
             /* RGB red off */
             rgbAllLedsOff();
-
-            writeDebug("Run failed because of open lid\n", false);
             unit_disinfection_state = UNIT_DISINFECTION_STATE_OPEN_LID;
             break;
         }
@@ -354,10 +326,11 @@ static void unitDisinfectionRun(void) {
                 /* Run has failed so go to unsuccessful state */
                 unit_disinfection_state = UNIT_DISINFECTION_STATE_UNSUCCESSFUL;
             } else {
-                unit_disinfection_state = UNIT_DISINFECTION_STATE_SUCCESSFUL;
+
                 ini_putl(UV_SENSOR_SECTION_NAME,
                          (active_uv_lamp == 1) ? UV_CALIBRATION_1_KEY_NAME : UV_CALIBRATION_2_KEY_NAME,
                          uv_lamp_sensor_value, SETTINGS_INI_FILE);
+                unit_disinfection_state = UNIT_DISINFECTION_STATE_SUCCESSFUL;
             }
 
             break;
@@ -426,27 +399,26 @@ static void writeDebug(char debug_info[], bool writeIni) {
 
     rtcGetDate(&date);
     rtcGetTime(&time);
-    /* Create directory if it doesn't exist */
 
-    char result[400] = {0};
+    char result[800] = {0};
     strcat(result, debug_info);
     strcat(result, "\n");
 
     if(writeIni){
 
-    	 strcat(result, "{");
+        strcat(result, "{");
 
-        char active_l[] = {0};
-        char uv_1_fail[] = {0};
-        char uv_2_fail[] = {0};
-        char uv_1_calibration[] = {0};
-        char uv_2_calibration[] = {0};
+        char active_l[32] = {0};
+        char uv_1_fail[32] = {0};
+        char uv_2_fail[32] = {0};
+        char uv_1_calibration[32] = {0};
+        char uv_2_calibration[32] = {0};
 
-        snprintf(active_l, 64,"%lu", ini_getl(DEVICE_SECTION_NAME, LAST_ACTIVE_UV_LAMP_KEY_NAME, 0, SETTINGS_INI_FILE));
-        snprintf(uv_1_fail, 64,"%lu", ini_getl(UV_SENSOR_SECTION_NAME, UV_LAMP_1_FAIL_COUNT_KEY_NAME, 0, SETTINGS_INI_FILE));
-        snprintf(uv_2_fail, 64,"%lu", ini_getl(UV_SENSOR_SECTION_NAME, UV_LAMP_2_FAIL_COUNT_KEY_NAME, 0, SETTINGS_INI_FILE));
-        snprintf(uv_1_calibration, 64,"%lu", ini_getl(UV_SENSOR_SECTION_NAME, UV_CALIBRATION_1_KEY_NAME, 0, SETTINGS_INI_FILE));
-        snprintf(uv_2_calibration, 64,"%lu", ini_getl(UV_SENSOR_SECTION_NAME, UV_CALIBRATION_2_KEY_NAME, 0, SETTINGS_INI_FILE));
+        snprintf(active_l, 32,"%lu", ini_getl(DEVICE_SECTION_NAME, LAST_ACTIVE_UV_LAMP_KEY_NAME, 0, SETTINGS_INI_FILE));
+        snprintf(uv_1_fail, 32,"%lu", ini_getl(UV_SENSOR_SECTION_NAME, UV_LAMP_1_FAIL_COUNT_KEY_NAME, 0, SETTINGS_INI_FILE));
+        snprintf(uv_2_fail, 32,"%lu", ini_getl(UV_SENSOR_SECTION_NAME, UV_LAMP_2_FAIL_COUNT_KEY_NAME, 0, SETTINGS_INI_FILE));
+        snprintf(uv_1_calibration, 32,"%lu", ini_getl(UV_SENSOR_SECTION_NAME, UV_CALIBRATION_1_KEY_NAME, 0, SETTINGS_INI_FILE));
+        snprintf(uv_2_calibration, 32,"%lu", ini_getl(UV_SENSOR_SECTION_NAME, UV_CALIBRATION_2_KEY_NAME, 0, SETTINGS_INI_FILE));
 
         strcat(result, "\n");
     	strcat(result, LAST_ACTIVE_UV_LAMP_KEY_NAME);
@@ -473,10 +445,12 @@ static void writeDebug(char debug_info[], bool writeIni) {
         strcat(result, " = ");
         strcat(result, uv_2_calibration);
 
+
         strcat(result, "\n}\n\n");
 
     }
 
+    /* Create directory if it doesn't exist */
     if (f_stat("0://DEBUG", &file_info) != FR_OK)
         f_mkdir("0://DEBUG");
 
