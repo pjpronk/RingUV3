@@ -427,16 +427,6 @@ static void writeDebug(char debug_info[], bool writeIni) {
     rtcGetDate(&date);
     rtcGetTime(&time);
     /* Create directory if it doesn't exist */
-    if (f_stat("0://DEBUG", &file_info) != FR_OK)
-        f_mkdir("0://DEBUG");
-
-    char file_name[32] = "0://DEBUG/debug_report";
-    snprintf(file_name, 32, "0://DEBUG/%.4d-%.2d.TXT", (date.year + 2000), date.month);
-    /* Try to open the file */
-    if (f_open(&outcome_file, file_name, FA_WRITE | FA_OPEN_APPEND) != FR_OK) {
-        debug(DEBUG_ENABLED, DEBUG_LEVEL_INFORMATION, "Failed to open outcome file\r\n");
-        return;
-    }
 
     char result[400] = {0};
     strcat(result, debug_info);
@@ -485,6 +475,17 @@ static void writeDebug(char debug_info[], bool writeIni) {
 
         strcat(result, "\n}\n\n");
 
+    }
+
+    if (f_stat("0://DEBUG", &file_info) != FR_OK)
+        f_mkdir("0://DEBUG");
+
+    char file_name[32] = "0://DEBUG/debug_report";
+    snprintf(file_name, 32, "0://DEBUG/%.4d-%.2d.TXT", (date.year + 2000), date.month);
+    /* Try to open the file */
+    if (f_open(&outcome_file, file_name, FA_WRITE | FA_OPEN_APPEND) != FR_OK) {
+        debug(DEBUG_ENABLED, DEBUG_LEVEL_INFORMATION, "Failed to open outcome file\r\n");
+        return;
     }
 
     uint16_t length = snprintf(file_buffer, sizeof(file_buffer), result);
