@@ -77,37 +77,6 @@ void rtcInitialization(void)
 		/* Clear source Reset Flag */
 		__HAL_RCC_CLEAR_RESET_FLAGS();
 	}
-	/* Check if the date and time should be set */
-	//Tom::ADD29    Default waarde nu 0 gebruikt.
-	if(ini_getl(DATE_TIME_SECTION_NAME, DATE_READ_KEY_NAME, 0, SETTINGS_INI_FILE) == 1)
-	{
-
-		//TreADD:42
-		ini_putl(DATE_TIME_SECTION_NAME, DATE_READ_KEY_NAME, 0, SETTINGS_INI_FILE);
-
-		RtcDate date;
-		RtcTime time;
-		/* Read the date and time from the settings file */
-		date.year = (uint8_t)(ini_getl(DATE_TIME_SECTION_NAME, YEAR_KEY_NAME, 19, SETTINGS_INI_FILE) % 2000);
-		date.month = (uint8_t)(ini_getl(DATE_TIME_SECTION_NAME, MONTH_KEY_NAME, 1, SETTINGS_INI_FILE) % 13);
-		date.day = (uint8_t)(ini_getl(DATE_TIME_SECTION_NAME, DAY_KEY_NAME, 1, SETTINGS_INI_FILE) % 32);
-		time.hours = (uint8_t)(ini_getl(DATE_TIME_SECTION_NAME, HOUR_KEY_NAME, 0, SETTINGS_INI_FILE) % 24);
-		time.minutes = (uint8_t)(ini_getl(DATE_TIME_SECTION_NAME, MINUTE_KEY_NAME, 0, SETTINGS_INI_FILE) % 60);
-		time.seconds = 0;
-
-		rtcSetDate(&date);
-		rtcSetTime(&time);
-		debug(DEBUG_GROUP_RTC, DEBUG_LEVEL_ERROR, "RTC date/time has been set to: %d/%d/%d %d:%d\r\n", date.day, date.month, date.year, time.hours, time.minutes);
-
-		RtcDate dater;
-		RtcTime timer;
-
-		rtcGetDate(&dater);
-		rtcGetTime(&timer);
-
-		debug(DEBUG_GROUP_RTC, DEBUG_LEVEL_ERROR, "RTC date/time read: %d/%d/%d %d:%d:%d\r\n", dater.day, dater.month, dater.year, timer.hours, timer.minutes, timer.seconds);
-
-	}
 }
 
 /**
@@ -167,45 +136,6 @@ void rtcDelay(uint32_t seconds)
 
 	while(rtcGetTimePassed(start_time) < seconds);
 }
-
-
-//Tom:ADD23
-/**
-  * @brief  Get time in seconds since 1970 (UNIX time)
-  * @param  None
-  * @retval String readable date and time string.
-  */
-
-TCHAR * rtcGetUnixTimeString(TCHAR *str, int32_t len)
-{
-	RTC_DateTypeDef date;
-	RTC_TimeTypeDef time;
-	//char str[20];
-
-	//  2019-11-26 10-53-22
-	//  1234567890123456789 0x0   dus 20 lang.
-
-
-	/* The order of calling the date and time is very important! */
-	/* The get time should be called before the get date! */
-	HAL_RTC_GetTime(&rtc_handle, &time, RTC_FORMAT_BIN);
-	HAL_RTC_GetDate(&rtc_handle, &date, RTC_FORMAT_BIN);
-
-	uint16_t year = (uint16_t)(date.Year + 2000);
-
-	if(year < RTC_UNIX_START_YEAR)
-	{
-		strcpy( str, "FAIL2GETDATE");
-	}
-
-	str = itoa(year,str,10);
-
-	snprintf(str, len, "%04d-%02d-%02d %02d:%02d:%02d", year, date.Month, date.Date, time.Hours, time.Minutes, time.Seconds );
-
-	return str;
-}
-
-
 
 /**
   * @brief  Get time in seconds since 1970 (UNIX time)

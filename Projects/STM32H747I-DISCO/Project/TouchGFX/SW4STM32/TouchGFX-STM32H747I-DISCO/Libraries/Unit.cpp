@@ -28,7 +28,7 @@ static FIL outcome_file;
 
 static void unitThread(void const * argument);
 static void unitDisinfectionRun(void);
-static void EnsureOpenLid(void);
+static void OpenLid(void);
 static void writeDebug(char debug_info[], bool writeIni);
 
 
@@ -77,14 +77,17 @@ void unitSetup()
 
 void LoggingTimeStampNow(void)
 {
-    char str[80];
-    struct tm  ts;
-    uint32_t time;
+    char str[120];
 
-    time_t  timestamp = rtcGetUnixTime();
-    ts = *localtime(&timestamp);
+    //Relative time change from now till now
+    time_t  timestamp = rtcGetUnixTime() - RTC_UNIX_START_TIME;
 
-    strftime(str, sizeof(str), "%a %Y-%m-%d %H:%M:%S %Z \n", &ts);
+    int days = round(timestamp / (86400));
+    int hours = round(timestamp/ 3600 % 24);
+    int minutes = round(timestamp / 60 % 60);
+    int seconds =  round(timestamp % 60);
+
+    snprintf(str, sizeof(str), "Relative runtime: %i days, %02dHH:%02dMM:%02dSS. \n", days, hours, minutes, seconds);
 
     writeDebug(str, false);
 
@@ -149,6 +152,8 @@ static void unitDisinfectionRun(void) {
     switch (unit_disinfection_state) {
         case UNIT_DISINFECTION_STATE_START: {
 
+            LoggingTimeStampNow();
+
             //Play STARTUP video and turn on WHITE lights
             rgbWhiteLedOn();
             playAviFile(VIDEO_SCREEN_A, false, NULL);
@@ -158,11 +163,7 @@ static void unitDisinfectionRun(void) {
 
             //If lid is closed we have to open the lid.
             if (isLidClosed() == 1) {
-                lidActivateSolenoid();
-                osDelay(2000);
-                lidDeactivateSolenoid();
-                /* Ensures that lid has opened */
-                EnsureOpenLid();
+                OpenLid();
             }
 
             /* Go to check if lid is actually open state */
@@ -272,12 +273,10 @@ static void unitDisinfectionRun(void) {
             while ((isAudioPlaying() == 1) || (isVideoPlaying() == 1));
 
             if (isLidClosed() == 1) {
-                         lidActivateSolenoid();
-                         osDelay(2000);
-                         lidDeactivateSolenoid();
-                         EnsureOpenLid();
-                         unit_disinfection_state = UNIT_DISINFECTION_STATE_CHECK_RUNS;
+                         OpenLid();
                      }
+
+            unit_disinfection_state = UNIT_DISINFECTION_STATE_CHECK_RUNS;
 
             break;
 
@@ -343,6 +342,7 @@ static void unitDisinfectionRun(void) {
 
 
         case UNIT_DISINFECTION_STATE_SUCCESSFUL: {
+            LoggingTimeStampNow();
             writeDebug("Successful disinfection", true);
             rgbGreenLedOn();
             playAviFile(VIDEO_SCREEN_H, false, NULL);
@@ -357,6 +357,7 @@ static void unitDisinfectionRun(void) {
 
 
         case UNIT_DISINFECTION_STATE_UNSUCCESSFUL: {
+            LoggingTimeStampNow();
             writeDebug("Unsuccessful disinfection", true);
             rgbRedLedOn();
             playAviFile(VIDEO_SCREEN_I, true, NULL);
@@ -375,11 +376,16 @@ static void unitDisinfectionRun(void) {
 
 
 /**
-  * @brief  Check if lid has actually opened and give an error if this is not the case
+  * @brief  Opens lid and checks if it has actually opened.
   * @param  None
   * @retval None
   */
-static void EnsureOpenLid(void){
+static void OpenLid(void){
+
+    lidActivateSolenoid();
+    osDelay(2000);
+    lidDeactivateSolenoid();
+
     if(isLidClosed() == 1){
         rgbWhiteLedBlink();
         playAviFile(VIDEO_SCREEN_L, true, NULL);
@@ -398,12 +404,6 @@ static void writeDebug(char debug_info[], bool writeIni) {
         return;
 
     FILINFO file_info;
-    /* Get the date and time */
-    RtcDate date;
-    RtcTime time;
-
-    rtcGetDate(&date);
-    rtcGetTime(&time);
 
     char result[800] = {0};
     strcat(result, debug_info);
@@ -455,12 +455,23 @@ static void writeDebug(char debug_info[], bool writeIni) {
 
     }
 
+
+    /* Get the date and time */
+    RtcDate date;
+    RtcTime time;
+
+    rtcGetDate(&date);
+    rtcGetTime(&time);
+
+    time_t  timestamp = rtcGetUnixTime() - RTC_UNIX_START_TIME;
+    int months = round(timestamp / (86400) / 30);
+
     /* Create directory if it doesn't exist */
     if (f_stat("0://DEBUG", &file_info) != FR_OK)
         f_mkdir("0://DEBUG");
 
-    char file_name[32] = "0://DEBUG/debug_report";
-    snprintf(file_name, 32, "0://DEBUG/%.4d-%.2d.TXT", (date.year + 2000), date.month);
+    char file_name[64] = "0://DEBUG/debug_report";
+    snprintf(file_name, 64, "0://DEBUG/%.2d.TXT", months);
     /* Try to open the file */
     if (f_open(&outcome_file, file_name, FA_WRITE | FA_OPEN_APPEND) != FR_OK) {
         debug(DEBUG_ENABLED, DEBUG_LEVEL_INFORMATION, "Failed to open outcome file\r\n");
