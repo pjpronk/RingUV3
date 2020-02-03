@@ -149,8 +149,6 @@ static void unitDisinfectionRun(void) {
     switch (unit_disinfection_state) {
         case UNIT_DISINFECTION_STATE_START: {
 
-        	LoggingTimeStampNow();
-
             //Play STARTUP video and turn on WHITE lights
             rgbWhiteLedOn();
             playAviFile(VIDEO_SCREEN_A, false, NULL);
@@ -196,6 +194,13 @@ static void unitDisinfectionRun(void) {
                                                            SETTINGS_INI_FILE);
             uint32_t lamp_2_fail_count = ini_getl(UV_SENSOR_SECTION_NAME, UV_LAMP_2_FAIL_COUNT_KEY_NAME, 0,
                                                            SETTINGS_INI_FILE);
+
+
+            if(lamp_1_fail_count == 1 && lamp_2_fail_count == 1){
+                ini_putl(UV_SENSOR_SECTION_NAME, UV_LAMP_1_FAIL_COUNT_KEY_NAME, 0, SETTINGS_INI_FILE);
+                ini_putl(UV_SENSOR_SECTION_NAME, UV_LAMP_2_FAIL_COUNT_KEY_NAME, 0, SETTINGS_INI_FILE);
+            }
+
 
             /* Lamp 1 has failed */
             if (lamp_1_fail_count == 1) {
