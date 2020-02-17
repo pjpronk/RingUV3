@@ -36,8 +36,8 @@
 
 #include "stm32h747i_discovery.h"
 
-#include "UvLight.h"
-#include "Debug.h"
+#include "lib/UvLight.h"
+#include "lib/Debug.h"
 
 extern DMA2D_HandleTypeDef hdma2d;
 extern DSI_HandleTypeDef   hdsi;

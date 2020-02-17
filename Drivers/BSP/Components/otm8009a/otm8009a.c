@@ -38,7 +38,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "otm8009a.h"
-#include "Debug.h"
+#include "lib/Debug.h"
 
 /** @addtogroup BSP
   * @{

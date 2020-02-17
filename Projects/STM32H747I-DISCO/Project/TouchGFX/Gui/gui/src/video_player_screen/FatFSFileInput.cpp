@@ -6,7 +6,7 @@
 #ifndef SIMULATOR
 
 //#include "storage_app.h"
-#include "Storage.h"
+#include "lib/Storage.h"
 
 #include <stdio.h>
 #include <stdlib.h>

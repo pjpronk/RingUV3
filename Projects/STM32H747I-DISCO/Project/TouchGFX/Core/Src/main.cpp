@@ -11,13 +11,13 @@ using namespace touchgfx;
 #include <bsp.h>
 
 #include "Unit.h"
-#include "Config.h"
-#include "Audio.h"
-#include "Storage.h"
-#include "MicrosecondTimer.h"
-#include "MillisecondTimer.h"
-#include "RealTimeClock.h"
-#include "Debug.h"
+#include "lib/Config.h"
+#include "lib/Audio.h"
+#include "lib/Storage.h"
+#include "lib/MicrosecondTimer.h"
+#include "lib/MillisecondTimer.h"
+#include "lib/RealTimeClock.h"
+#include "lib/Debug.h"
 
 #include <gui/video_player_screen/VideoPlayerView.hpp>
 
@@ -54,8 +54,6 @@ int main(void)
 {
 	hw_init();
 	touchgfx_init();
-
-	debug(DEBUG_GROUP_MAIN, DEBUG_LEVEL_INFORMATION, "Version: %s (%s %s)\r\n", VERSION_STRING, __DATE__, __TIME__);
 
 	microsecondTimerInitialization();
 	millisecondTimerInitialization();

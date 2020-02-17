@@ -118,8 +118,8 @@ Application/User/TouchGFX/gui/Model.o: \
  /Users/ppronk/CLionProjects/UVSmartD25/Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h \
  /Users/ppronk/CLionProjects/UVSmartD25/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h \
  /Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/Gui/gui/include/gui/model/ModelListener.hpp \
- /Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/SW4STM32/TouchGFX-STM32H747I-DISCO/Libraries/Audio.h \
- /Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/SW4STM32/TouchGFX-STM32H747I-DISCO/Libraries/Config.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/SW4STM32/TouchGFX-STM32H747I-DISCO/Libraries/lib/Audio.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/SW4STM32/TouchGFX-STM32H747I-DISCO/Libraries/lib/Config.h \
  /Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/Core/Inc/bsp.h \
  /Users/ppronk/CLionProjects/UVSmartD25/Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_audio.h \
  /Users/ppronk/CLionProjects/UVSmartD25/Drivers/BSP/STM32H747I-Discovery/../Components/wm8994/wm8994.h \
@@ -131,7 +131,7 @@ Application/User/TouchGFX/gui/Model.o: \
  /Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/SW4STM32/TouchGFX-STM32H747I-DISCO/Middleware/FatFS/src/integer.h \
  /Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/SW4STM32/TouchGFX-STM32H747I-DISCO/Middleware/FatFS/src/ff.h \
  /Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/Config/ffconf.h \
- /Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/SW4STM32/TouchGFX-STM32H747I-DISCO/Libraries/Storage.h \
+ /Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/SW4STM32/TouchGFX-STM32H747I-DISCO/Libraries/lib/Storage.h \
  /Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/Core/Inc/usbh_diskio.h \
  /Users/ppronk/CLionProjects/UVSmartD25/Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_core.h \
  /Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/Config/usbh_conf.h \
@@ -145,7 +145,7 @@ Application/User/TouchGFX/gui/Model.o: \
  /Users/ppronk/CLionProjects/UVSmartD25/Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc/usbh_msc_scsi.h \
  /Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/Core/Inc/sd_diskio_dma.h \
  /Users/ppronk/CLionProjects/UVSmartD25/Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_sd.h \
- /Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/SW4STM32/TouchGFX-STM32H747I-DISCO/Libraries/Debug.h
+ /Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/SW4STM32/TouchGFX-STM32H747I-DISCO/Libraries/lib/Debug.h
 
 /Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/Gui/gui/include/gui/common/FrontendApplication.hpp:
 
@@ -383,9 +383,9 @@ Application/User/TouchGFX/gui/Model.o: \
 
 /Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/Gui/gui/include/gui/model/ModelListener.hpp:
 
-/Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/SW4STM32/TouchGFX-STM32H747I-DISCO/Libraries/Audio.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/SW4STM32/TouchGFX-STM32H747I-DISCO/Libraries/lib/Audio.h:
 
-/Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/SW4STM32/TouchGFX-STM32H747I-DISCO/Libraries/Config.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/SW4STM32/TouchGFX-STM32H747I-DISCO/Libraries/lib/Config.h:
 
 /Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/Core/Inc/bsp.h:
 
@@ -409,7 +409,7 @@ Application/User/TouchGFX/gui/Model.o: \
 
 /Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/Config/ffconf.h:
 
-/Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/SW4STM32/TouchGFX-STM32H747I-DISCO/Libraries/Storage.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/SW4STM32/TouchGFX-STM32H747I-DISCO/Libraries/lib/Storage.h:
 
 /Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/Core/Inc/usbh_diskio.h:
 
@@ -437,4 +437,4 @@ Application/User/TouchGFX/gui/Model.o: \
 
 /Users/ppronk/CLionProjects/UVSmartD25/Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_sd.h:
 
-/Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/SW4STM32/TouchGFX-STM32H747I-DISCO/Libraries/Debug.h:
+/Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/SW4STM32/TouchGFX-STM32H747I-DISCO/Libraries/lib/Debug.h:

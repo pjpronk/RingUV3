@@ -34,6 +34,7 @@ Drivers/BSP \
 Drivers/CMSIS \
 Drivers/STM32H7xx_HAL_Driver \
 Libraries \
+Libraries/lib \
 Middleware/FatFS/src \
 Middleware/FreeRTOS/CMSIS_RTOS \
 Middleware/FreeRTOS/MemMgr \

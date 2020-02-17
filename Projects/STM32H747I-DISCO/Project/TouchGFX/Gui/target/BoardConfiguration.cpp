@@ -13,7 +13,7 @@
 #include <STM32H747TouchController.hpp>
 #include <STM32H7Instrumentation.hpp>
 
-#include "Debug.h"
+#include <lib/Debug.h>
 
 /***********************************************************
  ******         24 Bits Per Pixel Support            *******
@@ -192,11 +192,11 @@ uint32_t TEMP_SENSOR_GetValue(void)
   uint32_t ConvertedValue = HAL_ADC_GetValue(&AdcHandle);
 
 #ifdef Calibration_ON
-  /* 110 °C - 30°C
-  -----------------  *  (ConvertedValue - TS_CAL1 )+30 °C
+  /* 110 ï¿½C - 30ï¿½C
+  -----------------  *  (ConvertedValue - TS_CAL1 )+30 ï¿½C
   TS_CAL2-TS_CAL1
-  TS_CAL2 :the temperature sensor calibration value acquired at 110°C stored at TS1_T0[1:0]
-  TS_CAL1 :the temperature sensor calibration value acquired at 30°C stored at TS1_T0[1:0]
+  TS_CAL2 :the temperature sensor calibration value acquired at 110ï¿½C stored at TS1_T0[1:0]
+  TS_CAL1 :the temperature sensor calibration value acquired at 30ï¿½C stored at TS1_T0[1:0]
   */
 #define VREFANALOG_VOLTAGE  3300
   JTemp= __LL_ADC_CALC_TEMPERATURE(VREFANALOG_VOLTAGE,\

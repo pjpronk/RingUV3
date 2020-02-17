@@ -1,5 +1,5 @@
 Libraries/Unit.o: ../Libraries/Unit.cpp ../Libraries/Unit.h \
- ../Libraries/Config.h \
+ ../Libraries/lib/Config.h \
  /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h \
  /Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/Config/stm32h7xx_hal_conf.h \
  /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h \
@@ -77,7 +77,7 @@ Libraries/Unit.o: ../Libraries/Unit.cpp ../Libraries/Unit.h \
  /Users/ppronk/CLionProjects/UVSmartD25/Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
  /Users/ppronk/CLionProjects/UVSmartD25/Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h \
  /Users/ppronk/CLionProjects/UVSmartD25/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h \
- ../Libraries/Storage.h \
+ ../Libraries/lib/Storage.h ../Libraries/lib/Config.h \
  /Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/SW4STM32/TouchGFX-STM32H747I-DISCO/Middleware/FatFS/src/ff_gen_drv.h \
  /Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/SW4STM32/TouchGFX-STM32H747I-DISCO/Middleware/FatFS/src/diskio.h \
  /Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/SW4STM32/TouchGFX-STM32H747I-DISCO/Middleware/FatFS/src/integer.h \
@@ -97,17 +97,18 @@ Libraries/Unit.o: ../Libraries/Unit.cpp ../Libraries/Unit.h \
  /Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/Core/Inc/sd_diskio_dma.h \
  /Users/ppronk/CLionProjects/UVSmartD25/Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_sd.h \
  /Users/ppronk/CLionProjects/UVSmartD25/Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery.h \
- ../Libraries/Rgb.h ../Libraries/UvLight.h ../Libraries/Lid.h \
- ../Libraries/Audio.h \
+ ../Libraries/lib/Rgb.h ../Libraries/lib/UvLight.h ../Libraries/lib/Lid.h \
+ ../Libraries/lib/Audio.h \
  /Users/ppronk/CLionProjects/UVSmartD25/Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_audio.h \
  /Users/ppronk/CLionProjects/UVSmartD25/Drivers/BSP/STM32H747I-Discovery/../Components/wm8994/wm8994.h \
  /Users/ppronk/CLionProjects/UVSmartD25/Drivers/BSP/STM32H747I-Discovery/../Components/wm8994/../Common/audio.h \
  /Users/ppronk/CLionProjects/UVSmartD25/Middlewares/ST/STM32_Audio/Addons/PDM/Inc/pdm2pcm_glo.h \
- ../Libraries/MillisecondTimer.h ../Libraries/RealTimeClock.h \
- ../Libraries/Debug.h \
+ ../Libraries/lib/MillisecondTimer.h ../Libraries/lib/Debug.h \
+ ../Libraries/lib/RealTimeClock.h \
  /Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/SW4STM32/TouchGFX-STM32H747I-DISCO/Middleware/MinIni/minIni.h \
  /Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/SW4STM32/TouchGFX-STM32H747I-DISCO/Middleware/MinIni/minGlue.h \
  /Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/SW4STM32/TouchGFX-STM32H747I-DISCO/Middleware/FatFS/src/ff.h \
+ ../Libraries/InstallationRun.h ../Libraries/DisinfectionRun.h \
  /Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/Gui/gui/include/gui/video_player_screen/VideoPlayerView.hpp \
  /Users/ppronk/CLionProjects/UVSmartD25/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/Application.hpp \
  /Users/ppronk/CLionProjects/UVSmartD25/Middlewares/ST/TouchGFX/touchgfx/framework/include/touchgfx/events/ClickEvent.hpp \
@@ -190,7 +191,7 @@ Libraries/Unit.o: ../Libraries/Unit.cpp ../Libraries/Unit.h \
 
 ../Libraries/Unit.h:
 
-../Libraries/Config.h:
+../Libraries/lib/Config.h:
 
 /Users/ppronk/CLionProjects/UVSmartD25/Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h:
 
@@ -346,7 +347,9 @@ Libraries/Unit.o: ../Libraries/Unit.cpp ../Libraries/Unit.h \
 
 /Users/ppronk/CLionProjects/UVSmartD25/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h:
 
-../Libraries/Storage.h:
+../Libraries/lib/Storage.h:
+
+../Libraries/lib/Config.h:
 
 /Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/SW4STM32/TouchGFX-STM32H747I-DISCO/Middleware/FatFS/src/ff_gen_drv.h:
 
@@ -386,13 +389,13 @@ Libraries/Unit.o: ../Libraries/Unit.cpp ../Libraries/Unit.h \
 
 /Users/ppronk/CLionProjects/UVSmartD25/Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery.h:
 
-../Libraries/Rgb.h:
+../Libraries/lib/Rgb.h:
 
-../Libraries/UvLight.h:
+../Libraries/lib/UvLight.h:
 
-../Libraries/Lid.h:
+../Libraries/lib/Lid.h:
 
-../Libraries/Audio.h:
+../Libraries/lib/Audio.h:
 
 /Users/ppronk/CLionProjects/UVSmartD25/Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_audio.h:
 
@@ -402,17 +405,21 @@ Libraries/Unit.o: ../Libraries/Unit.cpp ../Libraries/Unit.h \
 
 /Users/ppronk/CLionProjects/UVSmartD25/Middlewares/ST/STM32_Audio/Addons/PDM/Inc/pdm2pcm_glo.h:
 
-../Libraries/MillisecondTimer.h:
+../Libraries/lib/MillisecondTimer.h:
 
-../Libraries/RealTimeClock.h:
+../Libraries/lib/Debug.h:
 
-../Libraries/Debug.h:
+../Libraries/lib/RealTimeClock.h:
 
 /Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/SW4STM32/TouchGFX-STM32H747I-DISCO/Middleware/MinIni/minIni.h:
 
 /Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/SW4STM32/TouchGFX-STM32H747I-DISCO/Middleware/MinIni/minGlue.h:
 
 /Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/SW4STM32/TouchGFX-STM32H747I-DISCO/Middleware/FatFS/src/ff.h:
+
+../Libraries/InstallationRun.h:
+
+../Libraries/DisinfectionRun.h:
 
 /Users/ppronk/CLionProjects/UVSmartD25/Projects/STM32H747I-DISCO/Project/TouchGFX/Gui/gui/include/gui/video_player_screen/VideoPlayerView.hpp:
 

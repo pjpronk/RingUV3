@@ -21,9 +21,9 @@
 struct HwJPEG_Context_s HwJPEG_Context;
 #endif
 
-#include "Config.h"
-#include "Debug.h"
-#include "Audio.h"
+#include "lib/Config.h"
+#include "lib/Debug.h"
+#include "lib/Audio.h"
 
 MJPEGReader mJPEGReaderMovie;
 Box noMovieBackground;

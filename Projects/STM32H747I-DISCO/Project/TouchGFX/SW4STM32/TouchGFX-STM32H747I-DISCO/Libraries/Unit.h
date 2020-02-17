@@ -1,62 +1,50 @@
 #ifndef UNIT_H_
 #define UNIT_H_
 
+#include "lib/Config.h"
+#include "cmsis_os.h"
+#include "lib/Storage.h"
+#include "lib/Rgb.h"
+#include "lib/UvLight.h"
+#include "lib/Lid.h"
+#include "lib/Audio.h"
+#include "lib/MillisecondTimer.h"
+#include "lib/Debug.h"
+#include "lib/RealTimeClock.h"
+
+#include "minIni.h"
+
+
 #ifdef __cplusplus
  extern "C" {
 #endif
 
-#include "Config.h"
-#include "cmsis_os.h"
 
 extern osMessageQId UnitEvent;
 
 /* Settings */
-static const char UV_SENSOR_SECTION_NAME[] = 	"UV sensor";
+static const char UV_SENSOR_SECTION_NAME[] = 	"UV Sensor";
 static const char UV_CALIBRATION_1_KEY_NAME[] = "UV calibration 1";
 static const char UV_CALIBRATION_2_KEY_NAME[] = "UV calibration 2";
+static const char UV_SENSOR_VALUE_1_KEY_NAME[] = "UV last run sensor 1";
+static const char UV_SENSOR_VALUE_2_KEY_NAME[] = "UV last run sensor 2";
+
 
 static const char DEVICE_SECTION_NAME[] = 				"Device";
-static const char OUT_OF_SERVICE_ERROR_KEY_NAME[] = 	"Out-of-service error";
-static const char INSTALLATION_RUN_KEY_NAME[] = 		"Installation run";
-static const char MAINTENANE_REQUIRED_TIMESTAMP_KEY_NAME[] ="Maintenance required timestamp";
-static const char INITIAL_CONTROL_RUN_KEY_NAME[] = 		"Initial control run";
-static const char LAST_ACTIVE_UV_LAMP_KEY_NAME[] = 		"Last active UV lamp";
+static const char OUT_OF_SERVICE_ERROR_KEY_NAME[] = 	"Out of service error";
+static const char INSTALLATION_TIMESTAMP_KEY_NAME[] =   "Installation run timestamp";
 static const char LAST_RUN_TIMESTAMP_KEY_NAME[] = 		"Last run timestamp";
+static const char LAST_ACTIVE_UV_LAMP_KEY_NAME[] = 		"Last active UV lamp";
+
 static const char RUN_COUNT_KEY_NAME[] = 				"Run count";
-static const char UV_LAMP_1_RUN_SUCCESS_KEY_NAME[] = 	"UV lamp 1 run success";
-static const char UV_LAMP_2_RUN_SUCCESS_KEY_NAME[] = 	"UV lamp 2 run success";
-//Tom:ADD22
+static const char UV_LAMP_1_SUCCESS_COUNT_KEY_NAME[] = 	"UV lamp 1 success count";
+static const char UV_LAMP_2_SUCCESS_COUNT_KEY_NAME[] = 	"UV lamp 2 success count";
 static const char UV_LAMP_1_FAIL_COUNT_KEY_NAME[] =     "UV lamp 1 fail count";
 static const char UV_LAMP_2_FAIL_COUNT_KEY_NAME[] =     "UV lamp 2 fail count";
-//Tom:ADD1-1
-static const char LCD_BACKLIGHT_PERCENT_KEY_NAME[] =    "Lcd-Backlight-percent";
-static const char LOGGING_SECTION_NAME[] =              "DeviceLog";
-static const char LOGGING_INIT_SUCCESS_KEY_NAME[] =                "Initialisation Success ts";
-static const char LOGGING_INITIAL_CONTROLRUN_SUCCESS_KEY_NAME[] =  "Initial Control Success ts";
-static const char LOGGING_LAST_DISINF_SUCCESS_KEY_NAME[] =         "Last disinfection Success ts";
-static const char LOGGING_NOW_TIMESTAMP_KEY_NAME[] =               "Current Timestamp-now";
-static const char LOGGING_TIMECHECK_OVERWRITE_KEY_NAME[] =        "Thijs";
-//Tom:ADD40
-static const char DEVICE_VOLUME_PERCENTAGE_KEY_NAME[]              = "Device Volume Percentage";
 
+static const char UV_LAMP_WEARDOWN_MAX_KEY_NAME[] =     "Lamps max wear down";
+static const char SOLENOID_FAIL_COUNTER[] =             "Solenoid fail counter";
 
-//Tom:ADD29
-static const char UV_LAMP_1_USED_KEY_NAME[] =           "UV lamp 1 used";
-static const char UV_LAMP_2_USED_KEY_NAME[] =           "UV lamp 2 used";
-
-//Tom:ADD30
-static const char UV_LAMP_WEARDOWN_MAX_KEY_NAME[] =        "Lamps-weardown-max-percent";
-
-//Tom:ADD32
-static const char UV_LAMP_1_WEARDOWN_CURRENT_KEY_NAME[] =  "UV Lamp-1-weardown-current-percent";
-static const char UV_LAMP_2_WEARDOWN_CURRENT_KEY_NAME[] =  "UV Lamp-2-weardown-current-percent";
-static const char UV_LAMP_1_WEARDOWN_MIN_KEY_NAME[] =      "UV Lamp-1-weardown-min-percent";
-static const char UV_LAMP_2_WEARDOWN_MIN_KEY_NAME[] =      "UV Lamp-2-weardown-min-percent";
-
-
-//Tom:ADD14
-static const char SOLENOID_FAIL_COUNTER[] =             "Solenoid Fail Counter";
-static const char DEVICE_LAST_CLEAN_TIMESTAMP_KEY_NAME[] = "Device Last Clean timestamp";
 
 /* Audio */
 static const char AUDIO_STARTUP[] = 	"0://AUDIO/STARTUP.WAV";
@@ -93,10 +81,6 @@ static const char VIDEO_SCREEN_M[] = 	"0://VIDEO/M.AVI";
 #define MINIMUM_SENSOR_THRESHOLD_UV_LAMP_1	1000
 #define MINIMUM_SENSOR_THRESHOLD_UV_LAMP_2	1000
 
-#define RTC_UNIX_START_TIME 1514764800
-
-
-
 //Tom:ADD10
 #define VARIABLE_Q (31104000L)      // 12month * 30days * 24hours * 60 * 60  (Sec)
 #define VARIABLE_R (46656000L)      // 18 month * 30 * 24 * 60 * 60
@@ -114,31 +98,51 @@ static const char VIDEO_SCREEN_M[] = 	"0://VIDEO/M.AVI";
 #define VARIABLE_X 6				//Number of times
 #define VARIABLE_Y 3				//Number of times
 #define VARIABLE_Z 2				//Number of times
-/* Results */
-//static const char OUTCOME_FILE_NAME[] = "OUTCOME.TXT";
-static const char *OUTCOME_STRINGS[] = {"unsuccessful", "successful"};
+
 
 typedef enum {
-	UNIT_DISINFECTION_STATE_START,							//1
-	UNIT_DISINFECTION_STATE_IS_LID_CLOSED,					//2
-	UNIT_DISINFECTION_STATE_DISINFECTION,					//3
-	UNIT_DISINFECTION_STATE_LID_OPENED_UNAUTHORIZED_ERROR,	//4
-	UNIT_DISINFECTION_STATE_OPEN_LID,						//5
-	UNIT_DISINFECTION_STATE_IS_LID_OPEN,					//6
-	UNIT_DISINFECTION_STATE_LID_FAILED_TO_OPEN_ERROR,		//8
-	UNIT_DISINFECTION_STATE_UV_LIGHT_ERROR,					//11
-	UNIT_DISINFECTION_STATE_SUCCESSFUL,
-    UNIT_DISINFECTION_STATE_UNSUCCESSFUL,                   //13
-	UNIT_DISINFECTION_STATE_CHECK_RUNS,						//14
+    UV_LAMP_1,
+    UV_LAMP_2
+}UvLamp;
+
+typedef enum {
+    UNIT_ERROR_001,	//Can't guarantee successful disinfection. Both lamp sets are not performing accordingly.
+    UNIT_ERROR_002,	//Can't open automatically
+    UNIT_ERROR_003,	//Unauthorized open detected
+}UnitError;
+
+typedef enum {
+    UNIT_INSTALLATION_RUN,
+    UNIT_DISINFECTION_RUN,
+}UnitRun;
+
+typedef enum {
+    UNIT_INSTALLATION_STATE_START,                          //0
+    UNIT_INSTALLATION_STATE_OPEN_LID,	                    //1
+    UNIT_INSTALLATION_STATE_CHECK_UV_LAMPS,					//2
+    UNIT_INSTALLATION_STATE_LID_OPENED_UNAUTHORIZED_ERROR,	//3
+    UNIT_INSTALLATION_STATE_CHECK_RUNS,						//4
+    UNIT_INSTALLATION_STATE_SUCCESSFUL,						//5
+    UNIT_INSTALLATION_STATE_UNSUCCESSFUL,					//6
+    UNIT_INSTALLATION_STATE_BREAK,						//7
+}UnitInstallationState;
+
+typedef enum {
+	UNIT_DISINFECTION_STATE_START,							//0
+    UNIT_DISINFECTION_STATE_OPEN_LID,	    				//1
+	UNIT_DISINFECTION_STATE_DISINFECTION,					//2
+	UNIT_DISINFECTION_STATE_LID_OPENED_UNAUTHORIZED_ERROR,	//3
+    UNIT_DISINFECTION_STATE_CHECK_RUNS,						//4
+	UNIT_DISINFECTION_STATE_SUCCESSFUL,						//5
+    UNIT_DISINFECTION_STATE_UNSUCCESSFUL,					//6
+	UNIT_DISINFECTION_STATE_BREAK,					//7
+
 }UnitDisinfectionState;
 
-typedef enum {
-	UNIT_OUTCOME_UNSUCCESSFUL,
-	UNIT_OUTCOME_SUCCESSFUL,
-}UnitOutcome;
-
 void unitInitialization(void);
-
+void DisplayBlockingError(int error_code);
+void OpenLid(void);
+int RunLampCycle(UvLamp lamp_set);
 
 #ifdef __cplusplus
 }

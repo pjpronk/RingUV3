@@ -1,0 +1,15 @@
+#ifndef UVSMARTD25_INSTALLATIONRUN_H
+#define UVSMARTD25_INSTALLATIONRUN_H
+
+#include "Unit.h"
+
+UnitRun unitInstallationRun(void);
+UnitInstallationState installation_state_start(void);
+UnitInstallationState installation_state_open_lid(void);
+UnitInstallationState installation_state_check_uv_lamps(void);
+UnitInstallationState installation_state_lid_opened_unauthorized_error(void);
+UnitInstallationState installation_state_check_runs(void);
+UnitInstallationState installation_state_successful(void);
+UnitInstallationState installation_state_unsuccessful(void);
+
+#endif //UVSMARTD25_INSTALLATIONRUN_H

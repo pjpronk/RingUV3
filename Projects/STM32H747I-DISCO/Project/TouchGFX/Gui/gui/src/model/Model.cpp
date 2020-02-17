@@ -4,11 +4,11 @@
 #include <touchgfx/hal/HAL.hpp>
 
 #ifndef SIMULATOR
-#include "Audio.h"
-#include "Storage.h"
+#include "lib/Audio.h"
+#include "lib/Storage.h"
 #include "FreeRTOS.h"
 #include "bsp.h"
-#include "Debug.h"
+#include "lib/Debug.h"
 
 xQueueHandle GUITaskQueue = 0;
 xQueueHandle gui_msg_q;
