@@ -28,6 +28,7 @@ void lidInitialization(void);
 void lidActivateSolenoid(void);
 void lidDeactivateSolenoid(void);
 uint8_t isLidClosed(void);
+uint8_t isLidOpen(void);
 
 #ifdef __cplusplus
 }

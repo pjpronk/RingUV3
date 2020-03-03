@@ -7,14 +7,14 @@
 
 #include "Unit.h"
 
-UnitRun unitDisinfectionRun();
-UnitDisinfectionState disinfection_state_open_lid();
-UnitDisinfectionState disinfection_state_disinfection();
-UnitDisinfectionState disinfection_state_lid_opened_unauthorized_error();
-UnitDisinfectionState disinfection_state_check_runs();
-UnitDisinfectionState disinfection_state_successful();
-UnitDisinfectionState disinfection_state_unsuccessful();
-
+UnitRun unitDisinfectionRun(void);
+UnitDisinfectionState disinfection_state_open_lid(void);
+UnitDisinfectionState disinfection_state_disinfection(void);
+UnitDisinfectionState disinfection_state_lid_opened_unauthorized_error(void);
+UnitDisinfectionState disinfection_state_check_runs(void);
+UnitDisinfectionState disinfection_state_successful(void);
+UnitDisinfectionState disinfection_state_unsuccessful(void);
+UvLamp SelectUVLamp(void);
 
 
 #endif //UVSMARTD25_DISINFECTIONRUN_H

@@ -2,12 +2,13 @@
 #include "ff.h"
 #include "RealTimeClock.h"
 #include "Debug.h"
+#include "Unit.h"
+#include "time.h"
+
 
 #include "minIni.h"
 
 static RTC_HandleTypeDef rtc_handle;
-
-static void rtcDateTimeConfiguration(void);
 
 /**
   * @brief  Initialize the internal Real Time Clock (RTC)
@@ -58,17 +59,11 @@ void rtcInitialization(void)
 	/* Read the Back Up Register 1 Data */
 	if (HAL_RTCEx_BKUPRead(&rtc_handle, RTC_BKP_DR1) != RTC_KEY)
 	{
-	    int timestamp = ini_getl(DEVICE_SECTION_NAME, "Last run timestamp", 0, SETTINGS_INI_FILE);
-
-	    if(timestamp < rtcGetUnixTime()){
-            rtcSetStartTime();
-        } else {
-	        rtcSetTimeStamp(timestamp);
-	    }
-
+        rtcSetStartTime();
 	}
 	else
 	{
+
 		/* Check if the Power On Reset flag is set */
 		if (__HAL_RCC_GET_FLAG(RCC_FLAG_PORRST) != RESET)
 		{
@@ -82,6 +77,9 @@ void rtcInitialization(void)
 		/* Clear source Reset Flag */
 		__HAL_RCC_CLEAR_RESET_FLAGS();
 	}
+
+	int timestamp = ini_getl(DEVICE_SECTION_NAME, LAST_RUN_TIMESTAMP_KEY_NAME, 0, SETTINGS_INI_FILE);
+	rtcSetTimeStamp(timestamp);
 }
 
 /**
@@ -125,33 +123,26 @@ void rtcSetStartTime(void)
   * @param  None
   * @retval None
   */
-void rtcSetTimeStamp(int timestamp)
+void rtcSetTimeStamp(time_t timestamp)
 {
-    //TreADD:42
-    ini_putl(DATE_TIME_SECTION_NAME, DATE_READ_KEY_NAME, 0, SETTINGS_INI_FILE);
+	RtcTime time;
+	RtcDate date;
 
-    RtcDate date;
-    RtcTime time;
-    /* Read the date and time from the settings file */
-    date.year = (uint8_t)(ini_getl(DATE_TIME_SECTION_NAME, YEAR_KEY_NAME, 19, SETTINGS_INI_FILE) % 2000);
-    date.month = (uint8_t)(ini_getl(DATE_TIME_SECTION_NAME, MONTH_KEY_NAME, 1, SETTINGS_INI_FILE) % 13);
-    date.day = (uint8_t)(ini_getl(DATE_TIME_SECTION_NAME, DAY_KEY_NAME, 1, SETTINGS_INI_FILE) % 32);
-    time.hours = (uint8_t)(ini_getl(DATE_TIME_SECTION_NAME, HOUR_KEY_NAME, 0, SETTINGS_INI_FILE) % 24);
-    time.minutes = (uint8_t)(ini_getl(DATE_TIME_SECTION_NAME, MINUTE_KEY_NAME, 0, SETTINGS_INI_FILE) % 60);
-    time.seconds = 0;
+	struct tm * local_time;
+	local_time = localtime(&timestamp);
 
-    rtcSetDate(&date);
-    rtcSetTime(&time);
-    debug(DEBUG_GROUP_RTC, DEBUG_LEVEL_ERROR, "RTC date/time has been set to: %d/%d/%d %d:%d\r\n", date.day, date.month, date.year, time.hours, time.minutes);
+	date.year = local_time->tm_year - 100;
+	date.month = local_time->tm_mon + 1;
+	date.day = local_time->tm_mday;
 
-    RtcDate dater;
-    RtcTime timer;
+	time.hours = local_time->tm_hour;
+	time.minutes = local_time->tm_min;
+	time.seconds = local_time->tm_sec;
 
-    rtcGetDate(&dater);
-    rtcGetTime(&timer);
+	rtcSetDate(&date);
+	rtcSetTime(&time);
 
-    debug(DEBUG_GROUP_RTC, DEBUG_LEVEL_ERROR, "RTC date/time read: %d/%d/%d %d:%d:%d\r\n", dater.day, dater.month, dater.year, timer.hours, timer.minutes, timer.seconds);
-
+	writeDebug("Timing data lost. Time set to last known time stamp.", false);
 }
 
 /**

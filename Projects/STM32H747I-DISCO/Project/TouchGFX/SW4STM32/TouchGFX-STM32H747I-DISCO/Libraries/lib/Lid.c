@@ -81,6 +81,17 @@ uint8_t isLidClosed(void)
 }
 
 /**
+  * @brief  Is the lid open? Both the clip and hinge sensor should be in the correct position to detect an open lid
+  * @param  None
+  * @retval 0: lid is not closed, 1: lid is closed
+  */
+uint8_t isLidOpen(void)
+{
+    return ((lid_inputs[0].output == LID_INPUT_STATE_ACTIVE) && (lid_inputs[1].output == LID_INPUT_STATE_NOT_ACTIVE));
+}
+
+
+/**
   * @brief  Debounce the lid input
   * @param  *lid_input: pointer to lid input structure
   * @retval None

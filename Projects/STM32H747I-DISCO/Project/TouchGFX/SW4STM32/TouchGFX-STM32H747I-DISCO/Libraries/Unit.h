@@ -32,13 +32,10 @@ static const char UV_SENSOR_VALUE_2_KEY_NAME[] = "UV last run sensor 2";
 
 static const char DEVICE_SECTION_NAME[] = 				"Device";
 static const char OUT_OF_SERVICE_ERROR_KEY_NAME[] = 	"Out of service error";
-static const char INSTALLATION_TIMESTAMP_KEY_NAME[] =   "Installation run timestamp";
 static const char LAST_RUN_TIMESTAMP_KEY_NAME[] = 		"Last run timestamp";
 static const char LAST_ACTIVE_UV_LAMP_KEY_NAME[] = 		"Last active UV lamp";
 
 static const char RUN_COUNT_KEY_NAME[] = 				"Run count";
-static const char UV_LAMP_1_SUCCESS_COUNT_KEY_NAME[] = 	"UV lamp 1 success count";
-static const char UV_LAMP_2_SUCCESS_COUNT_KEY_NAME[] = 	"UV lamp 2 success count";
 static const char UV_LAMP_1_FAIL_COUNT_KEY_NAME[] =     "UV lamp 1 fail count";
 static const char UV_LAMP_2_FAIL_COUNT_KEY_NAME[] =     "UV lamp 2 fail count";
 
@@ -80,6 +77,7 @@ static const char VIDEO_SCREEN_M[] = 	"0://VIDEO/M.AVI";
 #define NUMBER_OF_UV_SENSOR_SAMPLES 		100
 #define MINIMUM_SENSOR_THRESHOLD_UV_LAMP_1	1000
 #define MINIMUM_SENSOR_THRESHOLD_UV_LAMP_2	1000
+#define UV_LAMP_MAX_WEAR_DOWN_PERCENT 0.3
 
 //Tom:ADD10
 #define VARIABLE_Q (31104000L)      // 12month * 30days * 24hours * 60 * 60  (Sec)
@@ -101,8 +99,8 @@ static const char VIDEO_SCREEN_M[] = 	"0://VIDEO/M.AVI";
 
 
 typedef enum {
-    UV_LAMP_1,
-    UV_LAMP_2
+    UV_LAMP_1 = 1,
+    UV_LAMP_2 = 2
 }UvLamp;
 
 typedef enum {
@@ -128,8 +126,7 @@ typedef enum {
 }UnitInstallationState;
 
 typedef enum {
-	UNIT_DISINFECTION_STATE_START,							//0
-    UNIT_DISINFECTION_STATE_OPEN_LID,	    				//1
+	UNIT_DISINFECTION_STATE_START,							//
 	UNIT_DISINFECTION_STATE_DISINFECTION,					//2
 	UNIT_DISINFECTION_STATE_LID_OPENED_UNAUTHORIZED_ERROR,	//3
     UNIT_DISINFECTION_STATE_CHECK_RUNS,						//4
@@ -140,7 +137,7 @@ typedef enum {
 }UnitDisinfectionState;
 
 void unitInitialization(void);
-void DisplayBlockingError(int error_code);
+void DisplayBlockingError(UnitError error_code);
 void OpenLid(void);
 int RunLampCycle(UvLamp lamp_set);
 

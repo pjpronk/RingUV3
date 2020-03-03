@@ -28,6 +28,7 @@ static const char HOUR_KEY_NAME[] = "Hour";
 static const char MINUTE_KEY_NAME[] = "Minute";
 static const char DATE_READ_KEY_NAME[] = "Date read";
 
+
 static uint8_t RTC_DAYS_IN_MONTH[2][12] = {
 	{31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31},	/* Not leap year */
 	{31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}	/* Leap year */
@@ -46,9 +47,9 @@ typedef struct {
 }RtcDate;
 
 void rtcInitialization(void);
-uint32_t rtcGetTimePassed(uint32_t seconds_start);
-void rtcDelay(uint32_t seconds);
 uint32_t rtcGetUnixTime(void);
+void rtcSetStartTime(void);
+void rtcSetTimeStamp(time_t timestamp);
 void rtcSetTime(RtcTime* rtc_time);
 void rtcGetTime(RtcTime* rtc_time);
 void rtcSetDate(RtcDate* rtc_date);

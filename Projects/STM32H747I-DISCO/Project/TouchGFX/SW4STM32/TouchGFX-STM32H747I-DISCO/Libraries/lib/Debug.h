@@ -54,6 +54,8 @@ typedef enum
 #endif
 
 void writeDebug(char debug_info[], bool writeIni);
+void logResult(bool uv_status, int active_uv_lamp,
+        int uv_lamp_sensor_value, int uv_lamp_calibration_value);
 
 #if (DEBUG_OUTPUT == DEBUG_SERIAL)
 void debugSerialInitilization(void);

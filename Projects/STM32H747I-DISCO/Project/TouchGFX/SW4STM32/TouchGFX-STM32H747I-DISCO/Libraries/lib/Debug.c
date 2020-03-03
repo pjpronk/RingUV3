@@ -138,4 +138,53 @@ void writeDebug(char debug_info[], bool writeIni) {
     /* Free the shared resource */
     xSemaphoreGive(StorageSemaphore);
 }
+
+
+/**
+  * @brief  Save debug information to a file.
+  * @retval None
+  */
+void logResult(bool uv_status, int active_uv_lamp, int uv_lamp_sensor_value, int uv_lamp_calibration_value) {
+    /* Wait 10000 ticks for the shared resource to become free */
+    if (xSemaphoreTake(StorageSemaphore, 10000) != pdTRUE)
+        return;
+
+    FILINFO file_info;
+    FIL outcome_file;
+    FIL ini_file;
+
+    char result[128] = {};
+
+
+    int weardown_percent = round(100* (float) uv_lamp_sensor_value/ (float) uv_lamp_calibration_value);
+
+    snprintf(result, sizeof(result), "%d;%s;%d;%d;%d;;\n",
+            rtcGetUnixTime(), uv_status ? "Success" : "Fail", active_uv_lamp, uv_lamp_sensor_value, weardown_percent);
+
+
+    uint32_t number_of_bytes_read = 0;
+    /* Create directory if it doesn't exist */
+    if (f_stat("0://RESULTS", &file_info) != FR_OK) {
+        f_mkdir("0://RESULTS");
+    }
+
+    char file_name[64] = "0://RESULTS/results.csv";
+
+    if (f_open(&outcome_file, file_name, FA_WRITE | FA_OPEN_APPEND) != FR_OK) {
+        debug(DEBUG_ENABLED, DEBUG_LEVEL_INFORMATION, "Failed to open outcome file\r\n");
+        return;
+    }
+
+    uint16_t length = snprintf(file_buffer, sizeof(file_buffer), result);
+    uint32_t number_of_bytes_written = 0;
+
+    /* Write the result to the file and close it afterwards */
+    if (f_write(&outcome_file, file_buffer, length, (UINT * ) & number_of_bytes_written) != FR_OK) {
+        debug(DEBUG_ENABLED, DEBUG_LEVEL_INFORMATION, "Failed to write to outcome file\r\n");
+    }
+
+    f_close(&outcome_file);
+    /* Free the shared resource */
+    xSemaphoreGive(StorageSemaphore);
+}
 #endif

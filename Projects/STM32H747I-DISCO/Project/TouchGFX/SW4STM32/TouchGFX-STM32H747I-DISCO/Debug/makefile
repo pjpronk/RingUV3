@@ -67,7 +67,7 @@ all: UvSmart_CM7.elf
 UvSmart_CM7.elf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MCU G++ Linker'
-	arm-none-eabi-g++ -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -L"/Users/ppronk/CLionProjects/UVSmartD25/Middlewares/ST/TouchGFX/touchgfx/lib/core/cortex_m7/gcc"  -specs=nosys.specs -specs=nano.specs -T"../stm32h747xx_flash_CM7.ld" -Wl,-Map=output.map -Wl,--gc-sections -fno-exceptions -fno-rtti -o "UvSmart_CM7.elf" @"objects.list" $(USER_OBJS) $(LIBS) -lm
+	arm-none-eabi-g++ -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -L"/Users/ppronk/CLionProjects/UVSmartD25/Middlewares/ST/TouchGFX/touchgfx/lib/core/cortex_m7/gcc"  -specs=nosys.specs -specs=nano.specs -u _printf_float -T"../stm32h747xx_flash_CM7.ld" -Wl,-Map=output.map -Wl,--gc-sections -fno-exceptions -fno-rtti -o "UvSmart_CM7.elf" @"objects.list" $(USER_OBJS) $(LIBS) -lm
 	@echo 'Finished building target: $@'
 	@echo ' '
 	$(MAKE) --no-print-directory post-build
